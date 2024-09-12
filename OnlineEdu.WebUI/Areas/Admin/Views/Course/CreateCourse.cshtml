@@ -1,0 +1,25 @@
+﻿@model CreateCourseDto
+@{
+    ViewData["Title"] = "Yeni Kurs Ekleme Sayfası";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Resim Url</label>
+    <input type="text" asp-for="ImageUrl" class="form-control" />
+    <br />
+    <label>Kurs Adı</label>
+    <input type="text" asp-for="CourseName" class="form-control" />
+    <br />
+    <label>Fiyat</label>
+    <input type="text" asp-for="Price" class="form-control" />
+    <br />
+    <label>Kategori</label>
+    <select asp-for="CourseCategoryId" class="form-control" asp-items="@ViewBag.CourseCategories">
+        <option>Kategori Seçin</option>
+    </select>
+    <label>Ana Sayfada Gösterilsin</label> <input type="checkbox" asp-for="IsShown" class="form-check" />
+    <br />
+    <button class="btn btn-outline-primary">Kaydet</button>
+</form>
+

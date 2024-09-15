@@ -1,0 +1,75 @@
+﻿@model UserLoginDto
+@{
+    ViewData["Title"] = "SignIn";
+    Layout = "~/Views/UILayout/Layout.cshtml";
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/login-form-07/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="~/login-form-07/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/login-form-07/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="~/login-form-07/css/style.css">
+
+    <title>Online Edu | Giriş Sayfası</title>
+</head>
+<body>
+
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="~/login-form-07/images/undraw_remotely_2j6y.svg" alt="Image" class="img-fluid">
+                </div>
+                <div class="col-md-6 contents">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="mb-4">
+                                <h3>Giiş Yap</h3>
+                                <p class="mb-4">Ücretsiz kurslarımıza erişmek için sisteme giriş yapınız.</p>
+                            </div>
+                            <form method="post">
+                                <div class="form-group first">
+                                    <label for="username">Email</label>
+                                    <input type="email" asp-for="Email" class="form-control">
+                                </div>
+                                <div class="form-group last mb-4">
+                                    <label for="password">Şifre</label>
+                                    <input type="password" asp-for="Password" class="form-control">
+                                </div>
+                               
+                                <p style="color:red">
+                                    @Html.ValidationSummary()
+                                </p>
+
+                                <input type="submit" value="Giriş Yap" class="btn btn-block btn-primary">
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/login-form-07/js/jquery-3.3.1.min.js"></script>
+    <script src="~/login-form-07/js/popper.min.js"></script>
+    <script src="~/login-form-07/js/bootstrap.min.js"></script>
+    <script src="~/login-form-07/js/main.js"></script>
+</body>
+</html>
+

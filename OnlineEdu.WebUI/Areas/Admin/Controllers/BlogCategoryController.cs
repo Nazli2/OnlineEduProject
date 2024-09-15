@@ -1,12 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OnlineEdu.WebUI.DTOs.BlogCategoryDtos;
 using OnlineEdu.WebUI.Helpers;
 using OnlineEdu.WebUI.Validators;
 
 namespace OnlineEdu.WebUI.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
-    [Route("[area]/[controller]/[action]/{id?}")]
+ 
     public class BlogCategoryController : Controller
     {
         private readonly HttpClient _client = HttpClientInstance.CreateClient();

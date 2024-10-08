@@ -7,7 +7,7 @@ namespace OnlineEdu.WebUI.Services.UserServices
     public interface IUserService
     {
         Task<IdentityResult> CreateUserAsync(UserRegisterDto userRegisterDto);
-        Task<string> LoginASync(UserLoginDto userLoginDto);
+        Task<string> LoginAsync(UserLoginDto userLoginDto);
         Task<bool> LogoutAsync();
         Task<bool> CreateRoleAsync(UserRoleDto userRoleDto);
         Task<bool> AssignRoleAsync(List<AssignRoleDto> assignRoleDto);

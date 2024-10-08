@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using OnlineEdu.Entity.Entities;
 using OnlineEdu.WebUI.DTOs.UserDtos;
 using OnlineEdu.WebUI.Services.UserServices;
@@ -11,10 +10,10 @@ namespace OnlineEdu.WebUI.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
     [Area("Admin")]
-  
+
     public class RoleAssignController(IUserService _userService, UserManager<AppUser> _userManager, RoleManager<AppRole> _roleManager) : Controller
     {
-        public async  Task<IActionResult> Index()
+        public async Task<IActionResult> Index()
         {
             var values = await _userService.GetAllUsersAsync();
             return View(values);
@@ -47,15 +46,17 @@ namespace OnlineEdu.WebUI.Areas.Admin.Controllers
         }
 
         [HttpPost]
+
         public async Task<IActionResult> AssignRole(List<AssignRoleDto> assignRoleList)
         {
             int userId = (int)TempData["userId"];
 
             var user = await _userService.GetUserByIdAsync(userId);
 
-            foreach(var item in assignRoleList)
+            foreach (var item in assignRoleList)
             {
-                if(item.RoleExist)
+
+                if (item.RoleExist)
                 {
                     await _userManager.AddToRoleAsync(user, item.RoleName);
                 }
@@ -63,8 +64,14 @@ namespace OnlineEdu.WebUI.Areas.Admin.Controllers
                 {
                     await _userManager.RemoveFromRoleAsync(user, item.RoleName);
                 }
+
+
             }
+
             return RedirectToAction("Index");
         }
+
+
+
     }
 }

@@ -14,9 +14,9 @@ namespace OnlineEdu.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> SignIn(UserLoginDto userLoginDto)
         {
-            var userRole = await _userService.LoginASync(userLoginDto);
+            var userRole = await _userService.LoginAsync(userLoginDto);
 
-            if(userRole == "Admin")
+            if (userRole == "Admin")
             {
                 return RedirectToAction("Index", "About", new { area = "Admin" });
             }
@@ -33,6 +33,7 @@ namespace OnlineEdu.WebUI.Controllers
 
             else
             {
+
                 ModelState.AddModelError("", "Email veya Şifre Hatalı");
                 return View();
             }

@@ -69,5 +69,12 @@ namespace OnlineEdu.API.Controllers
 			var values = _courseCategoryService.TGetFilteredList(x => x.IsShown == true);
 			return Ok(values);
 		}
+
+        [HttpGet("GetCourseCategoryCount")]
+        public IActionResult GetCourseCategoryCount()
+        {
+            var courseCategoryCount = _courseCategoryService.TCount();
+            return Ok(courseCategoryCount);
+        }
     }
 }

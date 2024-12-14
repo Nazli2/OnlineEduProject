@@ -1,0 +1,36 @@
+﻿-------- UI ---------------------------------
+-Hakkımızda ayrı sayfada görüntüleme
+-Blog detayı görüntüleme
+-tüm bloglar sayfası
+-footer da subscribe alanı
+-footer da social media alanı 
+-alta yararlı linkler bölümü
+-iletişim sayfası
+
+-Access Denied Sayfası
+-404 sayfası
+
+
+------ Admin ----------------------------------
+-Dashboard sayfası
+-Aboneler sayfası
+-kullanıcılar kısmında kullanıcılara ait roller görüntüleme
+-siteye git alanı eklenecek
+-çıkış yap eklenecek
+-tüm kullanıcılar yanısıra öğretmenler ve öğrenciler listeleme
+-kurslar kısmında eğitmen ismi getirme
+
+------ Teacher ------------------------------------
+-Dashboard tasarımı 
+-Sidebar'a social media alanı eklenecek
+-profil bilgileri kısmı
+-çıkış yap
+-siteye git
+
+------- Student --------------------------------------
+-Dashboard tasarımı yapılacak
+-profil bilgileri sayfası 
+-CourseVideo entity eklenip api endpointleri hazırlanacak
+-kurslara ait videolar ve listelenmesi
+-çıkış yap
+-siteye git

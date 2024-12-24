@@ -1,5 +1,4 @@
 ﻿-------- UI ---------------------------------
--Hakkımızda ayrı sayfada görüntüleme
 -Blog detayı görüntüleme
 -tüm bloglar sayfası
 -footer da subscribe alanı

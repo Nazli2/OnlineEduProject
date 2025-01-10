@@ -1,11 +1,4 @@
-﻿-------- UI ---------------------------------
--Blog detayı görüntüleme
--tüm bloglar sayfası
--footer da subscribe alanı
--footer da social media alanı 
--alta yararlı linkler bölümü
--iletişim sayfası
-
+﻿-------- UI -------------------------------------
 -Access Denied Sayfası
 -404 sayfası
 

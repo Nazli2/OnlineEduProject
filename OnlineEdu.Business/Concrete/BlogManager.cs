@@ -17,6 +17,11 @@ namespace OnlineEdu.Business.Concrete
             _blogRepository = blogRepository;
         }
 
+        public List<Blog> TGetBlogsByCategoryById(int id)
+        {
+            return _blogRepository.GetBlogsByCategoryById(id);
+        }
+
         public List<Blog> TGetBlogsWithCategories()
         {
             return _blogRepository.GetBlogsWithCategories();
@@ -25,6 +30,11 @@ namespace OnlineEdu.Business.Concrete
         public List<Blog> TGetBlogsWithCategoriesByWriterId(int id)
         {
             return _blogRepository.GetBlogsWithCategoriesByWriterId(id);
+        }
+
+        public Blog TGetBlogWithCategory(int id)
+        {
+            return _blogRepository.GetBlogWithCategory(id);
         }
 
         public List<Blog> TGetLast4BlogsWithCategories()

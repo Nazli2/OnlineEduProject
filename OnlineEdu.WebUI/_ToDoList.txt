@@ -1,8 +1,4 @@
-﻿-------- UI -------------------------------------
--Access Denied Sayfası
--404 sayfası
-
-
+﻿
 ------ Admin ----------------------------------
 -Dashboard sayfası
 -Aboneler sayfası
